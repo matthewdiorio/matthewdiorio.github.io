@@ -1,4 +1,3 @@
-
 h1 {
   font-size: 55px;
   color: #ffffff;
@@ -116,7 +115,6 @@ html, body {
 }
 
 header {
-
   width: 100%;
   padding: 20px 10px 20px 10px;
   height: 100vh;
@@ -218,7 +216,6 @@ header {
     transform: rotate(350deg);
   }
 }
-
 
 .pad-xl {
   padding: 200px 0px;
@@ -343,8 +340,6 @@ hr.line {
   -o-background-size: cover;
 }
 
-
-
 .project-info {
   position: fixed;
   display: none;
@@ -362,18 +357,17 @@ hr.line {
   z-index: 10;
 }
 
-.project-text{
-padding:25px;
+.project-text {
+  padding: 25px;
 }
-.project-info h2 {
-  padding:10px;
-  color: black;
 
+.project-info h2 {
+  padding: 10px;
+  color: black;
 }
 
 .project-info p {
   color: black;
-
 }
 
 .github-btn {
@@ -450,11 +444,9 @@ footer {
 /* Landscape phones and down */
 
 @media (max-width: 480px) {
-
   h1 {
     font-size: 35pt;
   }
-
   .header-info {
     position: absolute;
     top: 10%;
@@ -487,6 +479,9 @@ footer {
 @media (min-width: 481px) and (max-width: 767px) {
   h1 {
     font-size: 35pt;
+  }
+  h2 {
+    font-size: 25pt;
   }
   .name {
     left: 15px;
