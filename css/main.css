@@ -476,7 +476,7 @@ footer {
 
 /* Landscape phone to portrait tablet */
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 991px) {
   h1 {
     font-size: 35pt;
   }
