@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <!-- Custom Css -->
+  <link rel="stylesheet" href="/css/style.css" type="text/css"/>
+  <link rel="stylesheet" href="/css/animate.css" type="text/css"/>
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+  <title>Matthew Diorio</title>
+</head>
+
+<body>
+  <div class="border">
+
+
+    <!-- E N D  BORDER-->
+
+    <section id="hero" class="work-details">
+      <div class="container">
+        <div class="row">
+          <div class="col-10 offset-2 col-sm-10 offset-sm-2 hero-content">
+            <h1>Whale Shark API</h1>
+            <p>A RESTful API to get facts about whale sharks. </p>
+            <img src="/images/whalesharkapi_mockup1.png" alt="mock up of Whale Shark API" class="wsa-img wow fadeInUp" data-wow-delay=".5s" >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- E N D  H E R O -->
+
+    <!-- MAIN MENU -->
+    <nav id="main-menu">
+      <ul class="nav-bar wow fadeIn" data-wow-delay="1.5s">
+        <li class="nav-button-home"><a href="../index.html">Home</a></li>
+        <li class="nav-button-services"><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+    <!-- END MAIN MENU -->
+
+    <!-- DOCUMENTATION -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 portfolio-item">
+            <div class="card-info">
+              <h4>Abstract</h4>
+              <p>A concept API to get facts about on whale sharks. Facts can be random or called specifically. Facts can
+                also be added.
+                The API was created using Node.JS and Express. A quick front-end shows a random whale shark fact along
+                with subtle animations.
+              </p>
+              <br>
+              <p>See it live <a href="https://whalesharkapi.herokuapp.com" class="api-link">here</a>.</p>
+              <br>
+              <h4>Usage</h4>
+              <br>
+              <div class="tab operation">
+                <h5>Base URL:</h5>
+                <p>https://whalesharkapi.herokuapp.com</p>
+              </div>
+              <div class="tab operation">
+                <h5>Get all facts:</h5>
+                <p>Returns all instances of whale shark facts along with source.</p>
+                <h6><span class="api-method">GET</span> whalesharkfacts/</h6>
+                <span>Example Response: Status Code 200</span>
+                <div class="code">
+                  <pre><code>
+  [
+   {
+      "_id": "603d5af10437c265d2c91bb1",
+      "fact": "Whale sharks are the worlds biggest fish!",
+      "source": "https://www.example.com",
+      "createdDate": "2021-02-23T01:31:29.564Z",
+      "__v": 0
+    }
+  ]
+                </code></pre>
+                </div>
+              </div>
+
+              <div class="tab operation">
+                <h5>Get a random fact:</h5>
+                <p>Returns returns a random fact.</p>
+                <h6><span class="api-method">GET</span> whalesharkfacts/random</h6>
+                <span>Example Response: Status Code 200</span>
+                <div class="code">
+                  <pre><code>
+  [
+   {
+      "_id": "603d5af10437c265d2c91bb1",
+      "fact": "Whale sharks are the worlds biggest fish!",
+      "source": "https://www.example.com",
+      "createdDate": "2021-02-23T01:31:29.564Z",
+      "__v": 0
+    }
+  ]
+                </code></pre>
+                </div>
+              </div>
+
+              <div class="tab operation">
+                <h5>Get a specific fact:</h5>
+                <p>Returns all instances of whale shark facts along with source.</p>
+                <h6><span class="api-method">GET</span> whalesharkfacts/{ID}</h6>
+                <table>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>ID</td>
+                    <td>String</td>
+                    <td>True</td>
+                    <td>ID of the fact you want to fetch.</td>
+                  </tr>
+                </table>
+                <span>Example Response: Status Code 200</span>
+                <div class="code">
+                  <pre><code>
+  [
+   {
+      "_id": "603d5af10437c265d2c91bb1",
+      "fact": "Whale sharks are the worlds biggest fish!",
+      "source": "https://www.example.com",
+      "createdDate": "2021-02-23T01:31:29.564Z",
+      "__v": 0
+    }
+  ]
+                </code></pre>
+                </div>
+              </div>
+
+
+              <div class="tab operation">
+                <h5>Posting a new fact:</h5>
+                <p>Post a new whale shark fact.</p>
+                <h6><span class="api-method">POST</span> whalesharkfacts/</h6>
+                <table>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>fact</td>
+                    <td>String</td>
+                    <td>True</td>
+                    <td>The whale shark fact you want to post.</td>
+                  </tr>
+                  <tr>
+                    <td>source</td>
+                    <td>String</td>
+                    <td>True</td>
+                    <td>The source of the fact.</td>
+                  </tr>
+                </table>
+                <span>Example Request: JSON</span>
+                <div class="code">
+                  <pre><code>
+  {
+    "fact": "Whale sharks are the world's biggest fish!",
+    "source": "https://www.example.com/"
+  }
+                </code></pre>
+                </div>
+
+                <span>Example Response: Status code 201</span>
+                <div class="code">
+                  <pre><code>
+  {
+    "_id": "604ad61c2c779e6179a2e788",
+    "fact": "Whale sharks are the world's biggest fish!",
+    "source": "https://www.example.com/",
+    "createdDate": "2021-03-12T02:46:52.199Z",
+    "__v": 0
+  }
+                </code></pre>
+                </div>
+              </div>
+
+
+
+
+              <div class="tab operation">
+                <h5>Change a fact:</h5>
+                <p>Change one part or all of a whale shark fact information</p>
+                <h6><span class="api-method">PATCH</span> whalesharkfacts/{ID}</h6>
+                <table>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>ID</td>
+                    <td>String</td>
+                    <td>True</td>
+                    <td>ID of the fact you want to update.</td>
+                  </tr>
+                </table>
+                <span>Example Request: JSON</span>
+                <div class="code">
+                  <pre><code>
+  {
+    "fact": "Whale sharks really are the world's biggest fish!"
+  }
+                </code></pre>
+                </div>
+
+                <span>Example Response: Status code 201</span>
+                <div class="code">
+                  <pre><code>
+  {
+    "_id": "604ad61c2c779e6179a2e788",
+    "fact": "Whale sharks really are the world's biggest fish!",
+    "source": "https://www.example.com/",
+    "createdDate": "2021-03-12T02:46:52.199Z",
+    "__v": 0
+  }
+                </code></pre>
+                </div>
+              </div>
+
+
+
+              <div class="tab operation">
+                <h5>Delete a fact:</h5>
+                <p>Delete a whale shark face with using it's assigned ID.</p>
+                <h6><span class="api-method">DELETE</span> whalesharkfacts/{ID}</h6>
+                <table>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>ID</td>
+                    <td>String</td>
+                    <td>True</td>
+                    <td>ID of the fact you want to delete.</td>
+                  </tr>
+                </table>
+                <span>Example Response: Status Code 200</span>
+                <div class="code">
+                  <pre><code>
+  {
+    "message": "Deleted Fact"
+  }
+                </code></pre>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <script src="/scripts/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
