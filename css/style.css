@@ -295,7 +295,20 @@ td, th {
 .color-section .swatch.grey {
 	background: #6F7071;
 }
-
+.color-section .swatch-chatapp-black{
+	background: #000000;
+}
+.color-section .swatch-chatapp-blue{
+	background: #2C35D5
+}
+.color-section .swatch-chatapp-grey{
+	background: #242424
+}
+.color-section .swatch-chatapp-white{
+	background: #FFFFFF;
+	border: #000000 thin solid;
+	color: black;
+}
 .typography{
 		display: flex;
 		flex-direction: column;
